@@ -1,0 +1,14 @@
+---
+dependencies: []
+
+galaxy_info:
+  min_ansible_version: 2.0
+  platforms:
+  - name: CentOS
+    versions:
+    - all
+  - name: Amazon Linux
+    versions:
+    - all
+  galaxy_tags:
+  - pam_limits
