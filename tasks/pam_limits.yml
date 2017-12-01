@@ -1,13 +1,13 @@
 - name: ensure file {{ item.value.dest }} exists
   copy:
     content: ""
-    dest: "/etc/security/limits.d/{{ item.value.dest }}"
+    dest: "/etc/security/limits.d/{{ item.value.dest }}.conf"
     force: no
     mode: 0644
   with_dict: "{{ pam_limits_limits }}"
 
 - pam_limits:
-    dest: "/etc/security/limits.d/{{ item.value.dest }}"
+    dest: "/etc/security/limits.d/{{ item.value.dest }}.conf"
     domain: "{{ item.value.domain }}"
     limit_type: "{{ item.value.type }}"
     limit_item: "{{ item.value.item }}"
