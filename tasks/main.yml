@@ -1,2 +1,2 @@
 ---
-- include: pam_limits.yml
+- import_tasks: pam_limits.yml
